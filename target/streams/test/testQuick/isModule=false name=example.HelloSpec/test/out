@@ -2,4 +2,9 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mA world[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should contain a single ant positioned in the middle[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should contain a single ant facing north[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should contain an ant that can move forward[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  should contain an ant that can move[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    when placed on a black square facing North which[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    - turns left to face West[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain squares to walk on[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  should contain an Ant which[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - can get the colour of the square it is currently on[0m[0m

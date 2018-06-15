@@ -7,7 +7,7 @@ class HelloSpec extends PlaySpec  {
 
   "A world" should {
 
-    val world  = World(10,10)
+    val world  = World(10,12)
 
     "contain a single ant positioned in the middle" in {
         world.ant.antPosition mustBe (5,5)
@@ -15,23 +15,58 @@ class HelloSpec extends PlaySpec  {
     "contain a single ant facing north" in {
       world.ant.antDirection mustBe North
     }
-    "contain an ant that can move forward" in {
-      world.ant.move mustBe Ant(6, 5, North)
+    "contain an ant that can move" when {
+
+      "placed on a black square facing North" which {
+
+        "turns left to face West" in {
+
+          val x = world.ant.square.x
+          val y = world.ant.square.y
+
+          world.ant.move mustBe Ant(Square("White", x, y), West)
+
+        }
+
+      }
+
+    }
+    "contain squares to walk on" in {
+      world.squares.length mustBe 10
+      world.squares(0).length mustBe 12
+    }
+
+    "contain an Ant" which {
+      "can get the colour of the square it is currently on" in {
+        world.ant.checkColour mustBe "Black"
+      }
     }
   }
+
 }
+
+case class Square(colour:String = "Black", x: Int, y: Int)
 
 case class World(width: Int, height: Int, ant: Ant) {
+  val squares: Array[Array[Square]] = Array.ofDim[Square](width, height)
 
 }
 
-case class Ant(x: Int, y: Int, orientation: Orientation) {
+case class Ant(square: Square, orientation: Orientation) {
 
-  def antPosition: (Int, Int) = (x, y)
+  def antPosition: (Int, Int) = (square.x, square.y)
   def antDirection: Orientation = North
 
-  def move: Ant = this.copy(x + 1, y, orientation)
+  def move: Ant = {
+    val color = if(square.colour == "Black") {
+      "White"
+    }else{
+      "Black"
+    }
+    this.copy(Square(color, square.x, square.y), West)
+  }
 
+  def checkColour: String = square.colour
 }
 
 object World {
@@ -39,7 +74,7 @@ object World {
 }
 
 object Ant {
-  def apply() : Ant = Ant(5,5,North)
+  def apply() : Ant = Ant(Square("Black", 5,5),North)
 }
 
 sealed trait Orientation

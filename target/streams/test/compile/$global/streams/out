@@ -1,4 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/juanrodriguez/Documents/Development/pods-langton-ant/src/test/scala/example/HelloSpec.scala:19:38: example.Ant does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m      world.ant.move mustBe world.ant(6, 5, North)[0m
-[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/juanrodriguez/Documents/Development/pods-langton-ant/src/test/scala/example/HelloSpec.scala:57:23: overloaded method value apply with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (square: example.Square,orientation: example.Orientation)example.Ant <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  ()example.Ant[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (Int, Int, example.North.type)[0m
+[0m[[0m[31merror[0m] [0m[0m  def apply() : Ant = Ant(5,5,North)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

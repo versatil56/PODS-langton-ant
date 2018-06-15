@@ -4,7 +4,7 @@
 		module="pods-langton-ant-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20180518103724"
+		publication="20180615143430"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

@@ -1,4 +1,5 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mHelloSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mThe Hello object[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  should Test[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - when say hello[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA world[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain a single ant positioned in the middle[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain a single ant facing north[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain an ant that can move forward[0m[0m
